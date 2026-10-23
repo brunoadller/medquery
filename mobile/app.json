@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "MedConsulta",
+    "slug": "medconsulta",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "br.com.seudominio.medconsulta",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f3d5e"
+      },
+      "permissions": ["RECORD_AUDIO", "USE_BIOMETRIC", "USE_FINGERPRINT"],
+      "allowBackup": false
+    },
+    "ios": {
+      "bundleIdentifier": "br.com.seudominio.medconsulta",
+      "supportsTablet": false
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-audio",
+        { "microphonePermission": "O MedConsulta usa o microfone para gravar as consultas." }
+      ],
+      [
+        "expo-local-authentication",
+        { "faceIDPermission": "Use o Face ID para desbloquear o MedConsulta." }
+      ]
+    ]
+  }
+}
